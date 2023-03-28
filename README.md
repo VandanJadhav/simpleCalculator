@@ -1,2 +1,2 @@
 # simpleCalculator
-BasicCalculator
+BasicCalculator using Html,Css and Javascript
