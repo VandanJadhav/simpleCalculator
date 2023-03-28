@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            
+            background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% );
+            
+            
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@1,500&display=swap');
+    #cal{
+        margin: auto;
+        margin-top: 150px;
+        width: 350px;
+        height: 475px;
+        border: 1px solid;
+        border-radius: 2px;
+        
+    background-color: #122c34;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    
+    }
+    #input{
+        margin-left: 7%;
+        margin-top: 20%;
+        height: 45px;
+        width: 300px;
+        outline: none;
+        caret-color: transparent;
+        font-weight: bolder;
+    }
+    .button{
+        height: 45px;
+        width: 75px;         
+        
+            /* background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%); */
+            background-color: #126f74;
+            /* margin: 10px; */
+            /* padding: 15px 45px; */
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 2px #20dbd9;
+            border-radius: 10px;
+            display: block;
+            border: none;
+            font-family: 'Anybody', ;
+         
+        
+        
+    }
+    .button:hover {
+            background-position: right center; 
+            text-decoration: none;
+          }
+    .flex{
+        display: flex;
+        justify-content: center;
+        /* justify-content: space-around; */
+        justify-content: space-evenly;
+    }
+
+    </style>
+
+  
+    
+</head>
+<body >
+    
+    <div id="cal">
+
+        <input type="text" style="" id="input" placeholder=>
+        <div class="flex" style="margin-top: 10%;">
+        <button class="button" onclick="takeInput('1')" value="1">1</button>
+        <button class="button" onclick="takeInput('2')" value="2">2</button>
+        <button class="button" onclick="takeInput('3')" value="3">3</button>
+        <button class="button" onclick="document.getElementById('input').value = ''" style="background-color: #20dbd9; color: black;">CE</button>
+        </div>
+
+        <div class="flex" style="margin-top: 10%;">
+            <button class="button"  onclick="takeInput('4')" value="4">4</button>
+            <button class="button"  onclick="takeInput('5')" value="5">5</button>
+            <button class="button"  onclick="takeInput('6')" value="6">6</button>
+            <button class="button"  onclick="takeInput('-')" value="-">-</button>
+            </div>
+            <div class="flex" style="margin-top: 10%;">
+                <button class="button" onclick="takeInput('7')" value="7">7</button>
+                <button class="button" onclick="takeInput('8')" value="8">8</button>
+                <button class="button" onclick="takeInput('9')" value="9">9</button>
+                <!-- <button class="button" onclick="sum()" value="+">+</button> -->
+                <button class="button" onclick="takeInput('+')" value="+">+</button>
+                </div>
+                <div class="flex" style="margin-top: 10%;">
+                    <button class="button" onclick="takeInput('-')" value="-">+/-</button>
+                    <button class="button" onclick="takeInput('0')" value="0">0</button>
+                    <button class="button" onclick="takeInput('.')" value=".">.</button>
+                    
+                    <button class="button" value="=" onclick="calculate()" id="btn" >=</button>
+
+                    
+                    </div>
+    </div>
+
+    <script>
+        var flag=0;
+        function takeInput(value) {
+           document.getElementById('input').value+=value;
+               
+        }
+          function calculate() {
+       var p = document.getElementById("input").value;
+        var q = eval(p);
+        document.getElementById("input").value = q;
+          }
+    </script>
+</body>
+</html>
